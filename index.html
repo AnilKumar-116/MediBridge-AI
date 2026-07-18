@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBridge AI | Every Minute Matters</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-heart-pulse"></i>
+<span>MediBridge AI</span>
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Features</a></li>
+
+<li><a href="#">How It Works</a></li>
+
+<li><a href="#">Pharmacies</a></li>
+
+<li><a href="#">About</a></li>
+
+</ul>
+
+<a href="#" class="btn-nav">Get Started</a>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="badge">
+
+<i class="fa-solid fa-bolt"></i>
+
+AI Powered Emergency Medicine Network
+
+</div>
+
+<h1>
+
+Find the Right Medicine
+
+Before Time Runs Out.
+
+</h1>
+
+<p>
+
+Upload a prescription or search a medicine.
+
+Our AI instantly locates the fastest pharmacy,
+
+predicts medicine availability,
+
+and recommends the quickest route.
+
+</p>
+
+<div class="search-box">
+
+<input 
+id = "medicineSearch"
+type="text"
+placeholder="Search Medicine Name...">
+
+<button id="searchBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search
+
+</button>
+
+</div>
+<div id="suggestions"></div>
+<div id="searchResults"></div>
+
+<div class="hero-buttons">
+
+<label for="prescriptionFile" class="primary-btn upload-btn">
+    <i class="fa-solid fa-file-medical"></i>
+    Upload Prescription
+</label>
+
+<input
+type="file"
+id="prescriptionFile"
+accept="image/*,.pdf"
+hidden>
+
+<div id="uploadResult"></div>
+
+<a href="#" class="secondary-btn">
+
+Watch Demo
+
+</a>
+
+</div>
+
+<div class="stats">
+
+<div>
+
+<h2>25K+</h2>
+
+<p>Medicines</p>
+
+</div>
+
+<div>
+
+<h2>2,000+</h2>
+
+<p>Partner Pharmacies</p>
+
+</div>
+
+<div>
+
+<h2>42 Sec</h2>
+
+<p>Average Search</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT SIDE ================= -->
+
+<div class="hero-right">
+
+<div class="phone">
+
+<div class="phone-header">
+
+<h3>MediBridge AI</h3>
+
+<div class="status green"></div>
+
+</div>
+
+<div class="medicine-card">
+
+<h4>
+
+Paracetamol 650
+
+</h4>
+
+<p>
+
+Availability
+
+<span class="green-text">
+
+96%
+
+</span>
+
+</p>
+
+</div>
+
+<div class="medicine-card">
+
+<h4>
+
+Emergency Injection
+
+</h4>
+
+<p>
+
+Availability
+
+<span class="yellow-text">
+
+Searching...
+
+</span>
+
+</p>
+
+</div>
+
+<div class="route-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>
+
+Nearest Pharmacy
+
+2.4 km
+
+</span>
+
+</div>
+
+<div class="route-line"></div>
+
+<div class="patient-dot"></div>
+
+<div class="pharmacy-dot"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<h2>
+
+Why MediBridge AI?
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-camera"></i>
+
+<h3>
+
+AI Prescription Reader
+
+</h3>
+
+<p>
+
+Extract medicine names from handwritten prescriptions.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-location-crosshairs"></i>
+
+<h3>
+
+Smart Medicine Finder
+
+</h3>
+
+<p>
+
+Locate pharmacies with the highest availability confidence.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-route"></i>
+
+<h3>
+
+Fastest Route
+
+</h3>
+
+<p>
+
+Navigate to the quickest medicine source.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<h3>
+
+Emergency Mode
+
+</h3>
+
+<p>
+
+Critical requests receive AI priority recommendations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="workflow">
+
+<h2>
+
+How It Works
+
+</h2>
+
+<div class="steps">
+
+<div class="step">
+
+<div class="circle">1</div>
+
+<h3>
+
+Upload
+
+</h3>
+
+<p>
+
+Upload your prescription.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">2</div>
+
+<h3>
+
+AI Reads
+
+</h3>
+
+<p>
+
+OCR extracts medicine details.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">3</div>
+
+<h3>
+
+Search
+
+</h3>
+
+<p>
+
+Nearby pharmacies are ranked.
+
+</p>
+
+</div>
+
+<div class="step">
+
+<div class="circle">4</div>
+
+<h3>
+
+Navigate
+
+</h3>
+
+<p>
+
+Get the fastest route.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2>
+
+Every Minute Matters.
+
+</h2>
+
+<p>
+
+Helping patients reach life-saving medicines faster with AI.
+
+</p>
+
+<a href="#" class="primary-btn">
+
+Start Searching
+
+</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 MediBridge AI
+
+Built for Healthcare Innovation Hackathon.
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/prescription.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
